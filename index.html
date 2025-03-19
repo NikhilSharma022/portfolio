@@ -3,135 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Software Developer</title>
-    <!-- Bootstrap CSS -->
+    <meta name="description" content="Portfolio of Nikhil Sharma - Software Engineer">
+    <title>Nikhil Sharma - Software Engineer</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    <style>
-        :root {
-            --primary-color: #0d6efd;
-            --dark-bg: #212529;
-            --light-bg: #f8f9fa;
-            --text-dark: #212529;
-            --text-light: #f8f9fa;
-        }
-
-        body {
-            padding-top: 76px;
-            transition: all 0.3s ease;
-            scroll-behavior: smooth;
-        }
-
-        body.dark-mode {
-            background-color: var(--dark-bg);
-            color: var(--text-light);
-        }
-
-        .dark-mode .card, 
-        .dark-mode .navbar {
-            background-color: #2c3034 !important;
-            color: var(--text-light);
-        }
-
-        .dark-mode .text-dark {
-            color: var(--text-light) !important;
-        }
-
-        .navbar {
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        #hero {
-            height: calc(100vh - 76px);
-            display: flex;
-            align-items: center;
-        }
-
-        .project-card {
-            transition: transform 0.3s ease;
-            height: 100%;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .tech-badge {
-            font-size: 0.8rem;
-            margin-right: 5px;
-            margin-bottom: 5px;
-        }
-
-        .skill-icon {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        .skill-card {
-            transition: transform 0.3s ease;
-            height: 100%;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-5px);
-        }
-
-        #contact {
-            background-color: rgba(13, 110, 253, 0.05);
-        }
-
-        .dark-mode #contact {
-            background-color: rgba(13, 110, 253, 0.1);
-        }
-
-        .social-icon {
-            font-size: 1.5rem;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-        }
-
-        .social-icon:hover {
-            color: var(--primary-color) !important;
-        }
-
-        .profile-img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 5px solid var(--primary-color);
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+   
 </head>
-<body data-bs-spy="scroll" data-bs-target="#navbar">
-    <!-- Navbar -->
-    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<body class="dark-mode">
+    <div class="cursor-dot d-none d-lg-block"></div>
+    <div class="cursor-outline d-none d-lg-block"></div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-transparent">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">Your Name</a>
+            <a class="navbar-brand fw-bold" href="#">Nikhil Sharma</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#hero">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     <li class="nav-item ms-2">
-                        <button id="darkModeToggle" class="btn btn-sm btn-outline-secondary">
-                            <i class="bi bi-moon"></i>
+                        <button id="darkModeToggle" class="btn btn-sm btn-outline-light">
+                            <i class="bi bi-sun"></i>
                         </button>
                     </li>
                 </ul>
@@ -139,222 +38,275 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="hero" class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 text-center text-lg-start">
-                <h1 class="display-4 fw-bold mb-4">Hello, I'm <span class="text-primary">Your Name</span></h1>
-                <h2 class="h3 mb-4">Software Developer</h2>
-                <p class="lead mb-4">Passionate about creating clean, efficient, and user-friendly applications.</p>
-                <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start">
-                    <a href="#projects" class="btn btn-primary px-4 py-2">View My Work</a>
-                    <a href="#contact" class="btn btn-outline-primary px-4 py-2">Contact Me</a>
-                </div>
-            </div>
-            <div class="col-lg-6 text-center mt-5 mt-lg-0">
-                <img src="/api/placeholder/400/400" alt="Your Name" class="profile-img">
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">About Me</h2>
+    <section id="hero" class="hero-section d-flex align-items-center" style="background-image: url('/api/placeholder/1920/1080');">
+        <div class="hero-overlay"></div>
+        <div class="binary-container" id="binaryContainer"></div>
+        <div class="container position-relative" style="z-index: 3;">
             <div class="row">
-                <div class="col-md-6 mb-4 mb-md-0">
-                    <h3>Who I Am</h3>
-                    <p>I'm a software developer with a passion for building innovative and efficient solutions. I specialize in [your areas of expertise] and have [X years] of experience in the field.</p>
-                    <p>My approach to development focuses on writing clean, maintainable code that solves real-world problems. I'm constantly learning new technologies and methodologies to stay at the cutting edge of software development.</p>
-                </div>
-                <div class="col-md-6">
-                    <h3>My Journey</h3>
-                    <div class="d-flex mb-3">
-                        <div class="flex-shrink-0">
-                            <span class="badge bg-primary p-2">2023 - Present</span>
-                        </div>
-                        <div class="ms-3">
-                            <h5>Senior Developer</h5>
-                            <p class="text-muted">Company Name</p>
-                        </div>
-                    </div>
-                    <div class="d-flex mb-3">
-                        <div class="flex-shrink-0">
-                            <span class="badge bg-primary p-2">2020 - 2023</span>
-                        </div>
-                        <div class="ms-3">
-                            <h5>Software Developer</h5>
-                            <p class="text-muted">Company Name</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="flex-shrink-0">
-                            <span class="badge bg-primary p-2">2019</span>
-                        </div>
-                        <div class="ms-3">
-                            <h5>Computer Science Degree</h5>
-                            <p class="text-muted">University Name</p>
-                        </div>
+                <div class="col-lg-8 text-white" data-aos="fade-right" data-aos-duration="1000">
+                    <h1 class="display-3 fw-bold mb-4">Hello, I'm <span class="text-primary">Nikhil Sharma</span></h1>
+                    <h2 class="h2 mb-4 fw-bold text-primary typing-text">Full-Stack Software Engineer</h2>
+                    <p class="lead mb-4">Passionate about building scalable web applications with C#, Angular, .NET Core, and Azure.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#projects" class="btn btn-primary px-4 py-2 position-relative overflow-hidden">
+                            View My Work
+                            <span class="position-absolute top-0 start-0 w-100 h-100 bg-white opacity-25" style="transform: translateX(-100%); transition: transform 0.3s ease;"></span>
+                        </a>
+                        <a href="#contact" class="btn btn-outline-light px-4 py-2">Contact Me</a>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="position-absolute bottom-0 start-50 translate-middle-x mb-4" style="z-index: 3;">
+            <a href="#about" class="text-white">
+                <i class="bi bi-chevron-down fs-1 animate__animated animate__bounce animate__infinite"></i>
+            </a>
+        </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">My Projects</h2>
+    <section id="about" class="py-5 bg-light">
+        <div class="container py-5">
+            <h2 class="text-center mb-5" data-aos="fade-up">About Me</h2>
             <div class="row g-4">
-                <!-- Project 1 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card project-card h-100 border-0 shadow-sm">
-                        <img src="/api/placeholder/600/400" class="card-img-top" alt="Project 1">
-                        <div class="card-body">
-                            <h5 class="card-title">E-commerce Platform</h5>
-                            <p class="card-text">A fully responsive e-commerce solution with product management, cart functionality, and payment processing.</p>
-                            <div class="mb-3">
-                                <span class="badge bg-primary tech-badge">React</span>
-                                <span class="badge bg-primary tech-badge">Node.js</span>
-                                <span class="badge bg-primary tech-badge">MongoDB</span>
-                            </div>
-                            <div class="d-flex gap-2">
-                                <a href="#" class="btn btn-sm btn-outline-primary">Live Demo</a>
-                                <a href="#" class="btn btn-sm btn-outline-dark">GitHub</a>
+                <div class="col-md-5" data-aos="fade-right">
+                    <div class="card border-0 shadow-sm h-100 position-relative">
+                        <div class="card-body p-4 text-center">
+                            <img src="/api/placeholder/400/400" alt="Nikhil Sharma" class="img-fluid rounded-circle mb-4 border border-5 border-primary" style="max-width: 200px;">
+                            <h3 class="mb-3">Nikhil Sharma</h3>
+                            <p class="text-muted mb-2">Software Engineer</p>
+                            <p class="text-muted mb-4"><i class="bi bi-geo-alt"></i> Mohali, India</p>
+                            <div class="d-flex justify-content-center flex-wrap gap-2">
+                                <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
+                                <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                                <a href="mailto:shannikhil22@gmail.com" class="social-icon"><i class="bi bi-envelope"></i></a>
+                                <a href="tel:8580788572" class="social-icon"><i class="bi bi-telephone"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Project 2 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card project-card h-100 border-0 shadow-sm">
-                        <img src="/api/placeholder/600/400" class="card-img-top" alt="Project 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Task Management App</h5>
-                            <p class="card-text">A productivity application with task categorization, reminders, and progress tracking.</p>
-                            <div class="mb-3">
-                                <span class="badge bg-primary tech-badge">Vue.js</span>
-                                <span class="badge bg-primary tech-badge">Firebase</span>
-                                <span class="badge bg-primary tech-badge">Tailwind CSS</span>
-                            </div>
-                            <div class="d-flex gap-2">
-                                <a href="#" class="btn btn-sm btn-outline-primary">Live Demo</a>
-                                <a href="#" class="btn btn-sm btn-outline-dark">GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 3 -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card project-card h-100 border-0 shadow-sm">
-                        <img src="/api/placeholder/600/400" class="card-img-top" alt="Project 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Weather Dashboard</h5>
-                            <p class="card-text">Real-time weather application with location detection, forecast data, and interactive maps.</p>
-                            <div class="mb-3">
-                                <span class="badge bg-primary tech-badge">JavaScript</span>
-                                <span class="badge bg-primary tech-badge">APIs</span>
-                                <span class="badge bg-primary tech-badge">Bootstrap</span>
-                            </div>
-                            <div class="d-flex gap-2">
-                                <a href="#" class="btn btn-sm btn-outline-primary">Live Demo</a>
-                                <a href="#" class="btn btn-sm btn-outline-dark">GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">My Skills</h2>
-            <div class="row g-4">
-                <!-- Languages -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="card skill-card h-100 border-0 shadow-sm text-center p-4">
-                        <div class="card-body">
-                            <i class="bi bi-code-slash skill-icon text-primary"></i>
-                            <h4>Languages</h4>
-                            <p>JavaScript, TypeScript, Python, Java, HTML, CSS</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Frameworks -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="card skill-card h-100 border-0 shadow-sm text-center p-4">
-                        <div class="card-body">
-                            <i class="bi bi-layers skill-icon text-primary"></i>
-                            <h4>Frameworks</h4>
-                            <p>React, Angular, Vue.js, Express.js, Django, Bootstrap</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Tools -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="card skill-card h-100 border-0 shadow-sm text-center p-4">
-                        <div class="card-body">
-                            <i class="bi bi-tools skill-icon text-primary"></i>
-                            <h4>Tools</h4>
-                            <p>Git, Docker, VS Code, Webpack, Jest, Postman</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Databases -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="card skill-card h-100 border-0 shadow-sm text-center p-4">
-                        <div class="card-body">
-                            <i class="bi bi-database skill-icon text-primary"></i>
-                            <h4>Databases</h4>
-                            <p>MongoDB, MySQL, PostgreSQL, Firebase, Redis</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Get In Touch</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="card border-0 shadow">
+                <div class="col-md-7" data-aos="fade-left">
+                    <div class="card border-0 shadow-sm h-100">
                         <div class="card-body p-4">
-                            <form id="contactForm">
-                                <div class="row g-3">
+                            <h3 class="border-start border-4 border-primary ps-3 mb-4">Professional Profile</h3>
+                            <p>Full-Stack Software Engineer with over two years of experience at Step2gen Technologies. Proficient in C#, Angular, .NET Core, and Azure, developing scalable web applications. Passionate about continuous learning and staying updated with industry trends to deliver high-quality solutions.</p>
+                            <h3 class="border-start border-4 border-primary ps-3 mb-4 mt-5">Experience & Education</h3>
+                            <div class="timeline-item">
+                                <div class="mb-3">
+                                    <span class="badge bg-primary p-2">Aug 2022 - Present</span>
+                                </div>
+                                <h5>Software Engineer</h5>
+                                <p class="text-muted">Step2Gen Technologies, Mohali</p>
+                                <p>Responsible for developing software solutions to enhance user experience and functionality. Skilled in Angular, Blazor, .NET Core, and cloud technologies, collaborating across teams to deliver quality outcomes.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="mb-3">
+                                    <span class="badge bg-primary p-2">2018 - 2022</span>
+                                </div>
+                                <h5>Bachelor of Computer Applications (BCA)</h5>
+                                <p class="text-muted">Himachal Pradesh University College of Business Studies</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-5">
+        <div class="container py-5">
+            <h2 class="text-center mb-5" data-aos="fade-up">My Projects</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card project-card border-0 shadow-sm h-100 overflow-hidden">
+                        <div class="position-relative">
+                            
+                            <div class="project-overlay text-white p-3">
+                                <h5 class="mb-3">Gift Special Messaging System</h5>
+                                <p class="mb-4">A solution that helps Shopify stores send special messages with customer orders, enhancing the shopping experience.</p>
+                            
+                            </div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Gift Special Messaging System</h5>
+                         
+                            <div class="mb-3 mt-auto">
+                                <span class="tech-badge">.NET Core 5</span>
+                                <span class="tech-badge">Blazor</span>
+                                <span class="tech-badge">SQL Server</span>
+                                <span class="tech-badge">Shopify</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card project-card border-0 shadow-sm h-100 overflow-hidden">
+                        <div class="position-relative">
+                    
+                            <div class="project-overlay text-white p-3">
+                                <h5 class="mb-3">Order Management System</h5>
+                                <p class="mb-4">An application that helps customers place orders with custom designs and print files for their family, friends, and teams.</p>
+                            
+                            </div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Order Management System</h5>
+                            <div class="mb-3 mt-auto">
+                                <span class="tech-badge">.NET Core 7</span>
+                                <span class="tech-badge">Angular</span>
+                                <span class="tech-badge">SQL Server</span>
+                                <span class="tech-badge">Azure</span>
+                                <span class="tech-badge">SendGrid</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="card project-card border-0 shadow-sm h-100 overflow-hidden">
+                        <div class="position-relative">
+                           
+                            <div class="project-overlay text-white p-3">
+                                <h5 class="mb-3">Construction Management System</h5>
+                                <p class="mb-4">A system for creating and managing construction contracts, assigning managers, and specifying locations and assets. Integrates third-party APIs for BIM models.</p>
+                         
+                            </div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Construction Contract & Asset Management</h5>
+                           
+                            <div class="mb-3 mt-auto">
+                                <span class="tech-badge">.NET Core 7</span>
+                                <span class="tech-badge">Angular</span>
+                                <span class="tech-badge">SQL Server</span>
+                                <span class="tech-badge">Azure</span>
+                                <span class="tech-badge">SendGrid</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-5 bg-light">
+        <div class="container py-5">
+            <h2 class="text-center mb-5" data-aos="fade-up">My Skills</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card skill-card border-0 shadow-sm h-100 text-center p-4">
+                        <div class="card-body">
+                            <div class="skill-icon">
+                                <i class="bi bi-server fs-1"></i>
+                            </div>
+                            <h4>Backend</h4>
+                            <p class="text-muted">C#, .NET Core, MVC, EF Core, Web API, gRPC</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card skill-card border-0 shadow-sm h-100 text-center p-4">
+                        <div class="card-body">
+                            <div class="skill-icon">
+                                <i class="bi bi-window fs-1"></i>
+                            </div>
+                            <h4>Frontend</h4>
+                            <p class="text-muted">HTML, CSS, JavaScript, Bootstrap, Sass, Angular, Blazor</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="flip-left" data-aos-delay="300">
+                    <div class="card skill-card border-0 shadow-sm h-100 text-center p-4">
+                        <div class="card-body">
+                            <div class="skill-icon">
+                                <i class="bi bi-database fs-1"></i>
+                            </div>
+                            <h4>Database</h4>
+                            <p class="text-muted">SQL Server, Entity Framework Core</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="flip-left" data-aos-delay="400">
+                    <div class="card skill-card border-0 shadow-sm h-100 text-center p-4">
+                        <div class="card-body">
+                            <div class="skill-icon">
+                                <i class="bi bi-tools fs-1"></i>
+                            </div>
+                            <h4>Tools & Cloud</h4>
+                            <p class="text-muted">Visual Studio, VS Code, GitHub, Jira, Azure, XUnit, Swagger, Postman</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5">
+        <div class="container py-5">
+            <h2 class="text-center mb-5" data-aos="fade-up">Get In Touch</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="fade-up">
+                    <div class="card border-0 shadow-lg">
+                        <div class="card-body p-5">
+                            <form id="contactForm" class="contact-form needs-validation" novalidate>
+                                <div class="row g-4">
                                     <div class="col-md-6">
                                         <label for="name" class="form-label">Name</label>
-                                        <input type="text" class="form-control" id="name" required>
+                                        <input type="text" class="form-control" id="name" required pattern="[A-Za-z\s]+" placeholder="Enter your name">
+                                        <div class="invalid-feedback">Please enter a valid name (letters only)</div>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="email" class="form-label">Email</label>
-                                        <input type="email" class="form-control" id="email" required>
+                                        <input type="email" class="form-control" id="email" required placeholder="Enter your email">
+                                        <div class="invalid-feedback">Please enter a valid email address</div>
                                     </div>
                                     <div class="col-12">
                                         <label for="subject" class="form-label">Subject</label>
-                                        <input type="text" class="form-control" id="subject" required>
+                                        <input type="text" class="form-control" id="subject" required minlength="3" placeholder="What's this about?">
+                                        <div class="invalid-feedback">Subject must be at least 3 characters</div>
                                     </div>
                                     <div class="col-12">
                                         <label for="message" class="form-label">Message</label>
-                                        <textarea class="form-control" id="message" rows="5" required></textarea>
+                                        <textarea class="form-control" id="message" rows="5" required minlength="10" placeholder="Write your message here..."></textarea>
+                                        <div class="invalid-feedback">Message must be at least 10 characters</div>
                                     </div>
                                     <div class="col-12 text-center">
-                                        <button type="submit" class="btn btn-primary px-5 py-2">Send Message</button>
+                                        <button type="submit" class="btn btn-primary px-5 py-2 position-relative overflow-hidden" id="submitBtn">
+                                            Send Message
+                                            <span class="position-absolute top-0 start-0 w-100 h-100 bg-white opacity-25" style="transform: translateX(-100%); transition: transform 0.3s ease;"></span>
+                                        </button>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-progress" id="formProgress">
+                                            <div class="form-progress-bar" id="formProgressBar"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </form>
-                            <hr class="my-4">
+                            <hr class="my-5">
                             <div class="text-center">
-                                <p class="mb-3">Or connect with me on:</p>
-                                <div>
-                                    <a href="#" class="text-dark social-icon"><i class="bi bi-github"></i></a>
-                                    <a href="#" class="text-dark social-icon"><i class="bi bi-linkedin"></i></a>
-                                    <a href="#" class="text-dark social-icon"><i class="bi bi-twitter-x"></i></a>
-                                    <a href="mailto:your.email@example.com" class="text-dark social-icon"><i class="bi bi-envelope"></i></a>
+                                <h4 class="mb-4">Contact Information</h4>
+                                <div class="row g-4">
+                                    <div class="col-sm-6">
+                                        <div class="mb-3">
+                                            <i class="bi bi-envelope-fill text-primary fs-4"></i>
+                                            <h5 class="mt-2">Email</h5>
+                                            <p><a href="mailto:shannikhil22@gmail.com" class="text-decoration-none">shannikhil22@gmail.com</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="mb-3">
+                                            <i class="bi bi-telephone-fill text-primary fs-4"></i>
+                                            <h5 class="mt-2">Phone</h5>
+                                            <p><a href="tel:8580788572" class="text-decoration-none">+91 8580788572</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <h5 class="mb-3">Find me on:</h5>
+                                    <div class="d-flex justify-content-center">
+                                        <a href="#" class="social-icon mx-2"><i class="bi bi-github"></i></a>
+                                        <a href="#" class="social-icon mx-2"><i class="bi bi-linkedin"></i></a>
+                                        <a href="#" class="social-icon mx-2"><i class="bi bi-twitter-x"></i></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -364,94 +316,14 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-4 text-center">
+    <footer class="py-4 bg-dark text-white text-center">
         <div class="container">
-            <p class="mb-0">&copy; 2025 Your Name. All rights reserved.</p>
+            <p class="mb-0">© 2025 Nikhil Sharma. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script>
-        // Dark Mode Toggle
-        const darkModeToggle = document.getElementById('darkModeToggle');
-        const body = document.body;
-        const icon = darkModeToggle.querySelector('i');
-
-        // Check for saved theme preference or prefer-color-scheme
-        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-        const savedTheme = localStorage.getItem('theme');
-
-        if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme.matches)) {
-            body.classList.add('dark-mode');
-            icon.classList.replace('bi-moon', 'bi-sun');
-        }
-
-        darkModeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            
-            if (body.classList.contains('dark-mode')) {
-                localStorage.setItem('theme', 'dark');
-                icon.classList.replace('bi-moon', 'bi-sun');
-            } else {
-                localStorage.setItem('theme', 'light');
-                icon.classList.replace('bi-sun', 'bi-moon');
-            }
-        });
-
-        // Form submission handling
-        const contactForm = document.getElementById('contactForm');
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            // Here you would typically send the form data to your email or a backend service
-            alert('Thank you for your message! In a real implementation, this would send an email.');
-            this.reset();
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 75,
-                        behavior: 'smooth'
-                    });
-                }
-                
-                // Close mobile navbar when clicking a link
-                const navbarCollapse = document.getElementById('navbarNav');
-                if (navbarCollapse.classList.contains('show')) {
-                    navbarCollapse.classList.remove('show');
-                }
-            });
-        });
-
-        // Add active class to navbar items on scroll
-        window.addEventListener('scroll', function() {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-link');
-            
-            let current = '';
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-                    current = section.getAttribute('id');
-                }
-            });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
